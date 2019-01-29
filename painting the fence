@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int totalposibility(int n, int k){
+    long dp[n+1];
+    dp[1] = k; 
+    long same = 0, diff = k; 
+    for (int i = 2; i <= n; i++) 
+    { 
+        same = diff; 
+        diff = dp[i-1] * (k-1); 
+        diff = diff % 1000000007; 
+        dp[i] = (same + diff) % 1000000007; 
+    } 
+  
+    return dp[n]; 
+}
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int n,k;
+	    cin>>n>>k;
+	    cout<<totalposibility(n,k)<<endl;
+	}
+	    return 0;
+}
