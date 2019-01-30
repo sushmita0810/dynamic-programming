@@ -9,6 +9,7 @@ A.DYNAMIC PROGRAMMING
 3. number of unique paths
 4.Edit Distance
 5. Matrix chain multiplication
+6.painting the fence
 #GREEDY APPROACH
 1.job sequencing
 2.fractional knapsack
